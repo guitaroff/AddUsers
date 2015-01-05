@@ -1,0 +1,22 @@
+<h1>Users</h1>
+
+<% if @users.empty? %>
+  <b>No users in store</b>
+<% else %>
+  <table>
+    <tr>
+      <th>user id</th>
+      <th>e-mail</th>
+    </tr>
+
+    <% @users.each do |i| %>
+
+    <tr>
+      <td><%= i.id %></td>
+      <td><%= i.email %></td>
+    </tr>
+<% end %>
+
+  </table>
+
+<% end %>
